@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(147, 152, 218);
+}
+header{
+    background-color:rgb(160, 147, 182);
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 10%;
+    color: fff;
+
+}
+h2{
+    border-style:none;
+    margin: 10px;
+    text-align: center;
+    font-size: 2.5em;
+
+}    
+.bar{
+   border-color: red;
+   margin:10px;
+   width: 95%;
+
+}
+
+.namecity{
+    border:none;
+    margin: 10px;
+    text-align: center;
+    border-color: red;
+    font-size: 2.5em;
+}
+li{
+    font-size: 2em;
+}
