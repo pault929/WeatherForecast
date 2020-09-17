@@ -30,6 +30,7 @@ input {
     list-style-type: none;
     padding: 0;
     background-color: white;
+    width: 100%;
   }
   
   li {
@@ -37,11 +38,12 @@ input {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
-    background-color: #ff5d88;
+    background-color: #c74be6;
     color: white;
     font-size: 1.5em;
     line-height: 1.5;
-    width: 25%;
+    width: 100%;
+    text-align: center;
   }
   
   li:before {
@@ -54,16 +56,18 @@ input {
     display: block;
     clear: both;
     width: 25%;
+    padding: 25PX;
   }
   
   li button {
-    float: right;
+    /* float: right; */
     border: none;
     height: 40px;
     cursor: pointer;
-    background-color: #ff9500;
+    background-color: #e08c15;
     color: white;
     font-size: 1em;
+    margin-bottom: 25%;
     
   }
   
@@ -71,14 +75,17 @@ input {
     background-color: #febc5d;
   } */
   
-  .todos {
-    /* width: 800px; */
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 50%;
+  .todos{
+    width: 800px;
+    margin-left: 50px;
+    /* margin-top: 40px; */
+    width: 50%; 
+    /* padding-left: 25px; */
   }
   
-
+  #todo-form {
+    width: 300%; 
+  }
 h2{
     border-style:none;
     margin: 10px;
