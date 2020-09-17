@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body{
     background-color: rgb(147, 152, 218);
 }
@@ -10,6 +16,69 @@ header{
     color: fff;
 
 }
+
+input {
+    height: 50px;
+    width: 50%;
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 2.4em;
+    border: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: white;
+  }
+  
+  li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #ff5d88;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+    width: 25%;
+  }
+  
+  li:before {
+    content: "\200B";
+    position: absolute;
+  }
+  
+  li::after {
+    content: " ";
+    display: block;
+    clear: both;
+    width: 25%;
+  }
+  
+  li button {
+    float: right;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    background-color: #ff9500;
+    color: white;
+    font-size: 1em;
+    
+  }
+  
+  /* li button:hover {
+    background-color: #febc5d;
+  } */
+  
+  .todos {
+    /* width: 800px; */
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 50%;
+  }
+  
+
 h2{
     border-style:none;
     margin: 10px;
@@ -19,8 +88,9 @@ h2{
 }   
 .bar{
    border-color: red;
-   margin:10px;
+   margin-left:50px;
    width: 95%;
+   padding: 15px;
 
 }
 
@@ -38,10 +108,31 @@ li{
     color: white;
     font-size: 2.0em;
     background-color:black;
-    
-
+    margin-left: 50px;
+    width: 95%;
 }
 
 a:hover {
     background-color: rgb(201, 7, 7);
-  }
+}
+
+.info{
+margin-left: 70px;
+}
+
+
+/* .weather-container {
+    background: #ccc;
+    text-align: center;
+}
+
+/* .weather{
+    font-size: 22px;
+    margin: 0;
+} 
+
+.temp{
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+} */
