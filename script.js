@@ -1,20 +1,3 @@
-// $.getJSON(
-//     "http://api.openweathermap.org/data/2.5/weather?q=Orlando&APPID=411910c4c4abb733221242b4d25a13f1",
-// function(data) { 
-//     console.log(data);
-
-//     var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-
-//     var temp = Math.floor(data.main.temp);
-//     var weather = data.weather[0].main;
-
-
-
-//     $(".icon").attr("src", icon);
-//     $(".weather").append(weather);
-//     $(".temp").append(temp);
-//     }
-// );
 var todoInput = document.querySelector("#todo-text");
 var todoForm = document.querySelector("#todo-form");
 var todoList = document.querySelector("#todo-list");

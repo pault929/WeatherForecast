@@ -2,125 +2,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul's Weather Channel</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-
+    <title>Pauls Local Forcast</title>
 </head>
 <body>
-    <header><h1>Paul's Weather Dashboard</h1></header>
-    
-    <div class="row">
-        <div class="col-lg-4 mb-4">
-          <h2>Search for city</h2>
-        </div>
-        <aside class="col-lg-8 mb-8"> 
-            <p class="namecity">Name of city goes here with date</p>
-          </div>
-        </aside> 
-      </div>
+    <div class="header">
+        <h1>Pauls Extended Forecast Generator</h1>
     </div>
 
-    <div class="row">
-        <div class="col-lg-4 mb-4">
-            <!-- <input class="bar" style="font-family: FontAwesome;" placeholder='&#xf002 Search...' /> -->
-            <!-- <input class="bar" type="search"><button style="font-size:26px" i class="fa fa-search"></i></button> -->
-            <div class="todos">
-              <form id="todo-form" method="POST">
-                <!-- <label for="todo-text">Add a Todo:</label> -->
-                <input type="text" name="todo-text" id="todo-text" />
-              </form>
-              <p><span id="todo-count"></span></p>
-              <ul id="todo-list"></ul>
+    <div class="container1">
+        <div class="row">
+           
+                <div class="col-lg-4 mb-4">
+                    <!-- <input class="bar" style="font-family: FontAwesome;" placeholder='&#xf002 Search...' /> -->
+                    <!-- <input class="bar" type="search"><button style="font-size:26px" i class="fa fa-search"></i></button> -->
+                    <div class="todos">
+                      <form id="todo-form" method="POST">
+                        <!-- <label for="todo-text">Add a Todo:</label> -->
+                        <input type="text" name="todo-text" id="todo-text" />
+                      </form>
+                      <p><span id="todo-count"></span></p>
+                      <ul id="todo-list" style="list-style-type:none"></ul>
+                    </div>
+                    
+                
             </div>
-            <div class="list-group">
-                <!-- <a href="#" class="list-group-item active">Austin,Texas</a> -->
-                <!-- <a href="#" class="list-group-item list-group-item">Medellin,Colombia</a>
-                <a href="#" class="list-group-item list-group-item">Norwalk,Connecticut</a>
-                <a href="#" class="list-group-item list-group-item">Denver,Collorado</a>
-                <a href="#" class="list-group-item list-group-item">Punta Del Este,Uruguay</a> -->
-              </div>
-            
-          
-        </div>
-        
-        <aside class="col-lg-8 mb-8"> 
-            <!-- <ul class="info">
-                <li>Temperature:</li>
-                <li>Humidity:</li>
-                <li>Wind Speed</li>
-                <li>UV Index:</li>
-            </ul> -->
-            <h2> Four Day Forecast</h2>
-            <div>
-              <div class="row">
-                <div class="col-sm-3">
+           <div class="col-lg-8"> 
+               <h3>Name of city from "Search box - list</h3>
+               <div class="info-weather">
+                   <p>Date and time</p>
+                   <img src="">
+                   <p>Temp:</p>
+                   <p>Humidity:</p>
+                   <p>Heat Index:</p>
+                   <p>Chance of Rain:</p>
+               </div>
+               <div class="fiveday">
+               <div class="row">
+                <div class="column">
                   <div class="card">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                      <p class="date"></p>
-                      <img class="icon">
-                      <p class="temp"></p>
-                      <p class="humidity"></p>
-                    </div>
+                    <h3>Card 1</h3>
+                    <p>Some text</p>
+                    <p>Some text</p>
                   </div>
                 </div>
-
-                <div class="col-sm-3">
+              
+                <div class="column">
                   <div class="card">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                      <p class="date"></p>
-                      <img class="icon">
-                      <p class="temp"></p>
-                      <p class="humidity"></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                      <p class="date"></p>
-                      <img class="icon">
-                      <p class="temp"></p>
-                      <p class="humidity"></p>
-                    </div>
+                    <h3>Card 2</h3>
+                    <p>Some text</p>
+                    <p>Some text</p>
                   </div>
                 </div>
                 
-                <div class="col-sm-3">
+                <div class="column">
                   <div class="card">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                      <p class="date"></p>
-                      <img class="icon">
-                      <p class="temp"></p>
-                      <p class="humidity"></p>
-                    </div>
+                    <h3>Card 3</h3>
+                    <p>Some text</p>
+                    <p>Some text</p>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <h3>Card 4</h3>
+                    <p>Some text</p>
+                    <p>Some text</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-        </aside> 
-      </div>
-    </div>
-      <div>
-      
-      </div>
-      <script src="script.js"></script>
+            
+
+        <!-- <div class="col-lg-6"> 
+           <h3>This area is for temp info and at the bottom cards</h3>
+        </div> -->
+       </div>
+       </div> 
+       <script src="script.js"></script>
 </body>
 </html>
