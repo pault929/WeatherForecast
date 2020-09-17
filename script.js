@@ -40,3 +40,36 @@ todoForm.addEventListener("submit", function(event) {
   // Re-render the list
   renderTodos();
 });
+
+var city = "orlando";
+
+$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial", function(date){
+
+console.log(date);
+
+var icon ="http://openweathermap.org/img/wn/10d@2x.png";
+
+
+var temp = Math.floor(data.main.temp);
+var weather = data.weather[0].main;
+
+$(".icon").attr("src", icon);
+$(".weather").append(weather);
+$(".temp").append(temp);
+}
+
+
+// 
+
+// var temp = data.main.temp;
+// var weather = data.weather[0].main;
+
+// console.log(icon);
+
+// $('.icon').atrr('src', icon);
+// $(".temp").append(temp);
+// $(".weather").append(weather);
+
+
+
+);

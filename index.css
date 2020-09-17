@@ -72,36 +72,10 @@ input {
     
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .placeholder{
     width: 100%;
 }
-.info-weather{
+.weather-container{
     border-style: double;
     border-color: black;
     /* text-align: center;  */
