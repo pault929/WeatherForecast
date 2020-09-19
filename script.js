@@ -97,6 +97,23 @@ function drawWeather( d ) {
 	document.getElementById('temp').innerHTML = celcius + '&deg;';
 	document.getElementById('location').innerHTML = d.name;
   
+  
+  document.getElementById('description2').innerHTML = description;
+	document.getElementById('temp2').innerHTML = celcius + '&deg;';
+	document.getElementById('location2').innerHTML = d.name;
+  
+  
+  document.getElementById('description3').innerHTML = description;
+	document.getElementById('temp3').innerHTML = celcius + '&deg;';
+	document.getElementById('location3').innerHTML = d.name;
+  
+  
+  document.getElementById('description4').innerHTML = description;
+	document.getElementById('temp4').innerHTML = celcius + '&deg;';
+	document.getElementById('location4').innerHTML = d.name;
+  
+  
+  
   if( description.indexOf('rain') > 0 ) {
   	document.body.className = 'rainy';
   } else if( description.indexOf('cloud') > 0 ) {
