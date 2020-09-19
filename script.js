@@ -41,22 +41,21 @@ todoForm.addEventListener("submit", function(event) {
   renderTodos();
 });
 
-var city = "orlando";
+// var todo = "Orlando";
 
-$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial", function(date){
+$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=orlando&units=imperial&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial", function(data){
 
-console.log(date);
+console.log(data);
 
 var icon ="http://openweathermap.org/img/wn/10d@2x.png";
 
 
-var temp = Math.floor(data.main.temp);
-var weather = data.weather[0].main;
+// var temperature = Math.floor(data.main.temperature);
+// var weather = data.weather[0].main;
 
-$(".icon").attr("src", icon);
-$(".weather").append(weather);
-$(".temp").append(temp);
-}
+// $(".icon").attr("src", icon);
+// $(".weather").append(weather);
+// $(".temp").append(temperature);
 
 
 // 
@@ -70,6 +69,44 @@ $(".temp").append(temp);
 // $(".temp").append(temp);
 // $(".weather").append(weather);
 
+var dt = newDate();
+  document.getElementById("datetime").innerHtml = dt.toLocaleString();
+
+});
 
 
-);
+const key = '';
+if(key=='') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
+
+function weatherBallon( cityID ) {
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + '411910c4c4abb733221242b4d25a13f1')  
+	.then(function(resp) { return resp.json() }) // Convert data to json
+	.then(function(data) {
+		drawWeather(data);
+	})
+	.catch(function() {
+		// catch any errors
+	});
+}
+function drawWeather( d ) {
+  var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+  var description = d.weather[0].description; 
+	
+	document.getElementById('description').innerHTML = description;
+	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('location').innerHTML = d.name;
+  
+  if( description.indexOf('rain') > 0 ) {
+  	document.body.className = 'rainy';
+  } else if( description.indexOf('cloud') > 0 ) {
+  	document.body.className = 'cloudy';
+  } else if( description.indexOf('sunny') > 0 ) {
+  	document.body.className = 'sunny';
+  } else {
+  	document.body.className = 'clear';
+  }
+}
+window.onload = function() {
+	weatherBallon( 6167865 );
+}

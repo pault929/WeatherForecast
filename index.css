@@ -111,11 +111,13 @@ input {
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-    text-align: center;
+    text-align: left;
     background-color: #f1f1f1;
   }
-  .fiveday{
+  .card2{
       margin-top: 5%;
+      border: solid;
+      border-color: red;
   }
   .container1{
       margin-left: 2%;
@@ -123,4 +125,15 @@ input {
   .col-lg-8{
       padding-right: 5%;
   }
+
+  img{
+    width: 50px;
+    height: 50px;
+  }
   
+  .container5{
+    margin: 100px;
+    padding: 100px;
+    border-style: dotted;
+    border-color:blue;
+  }

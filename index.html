@@ -16,72 +16,56 @@
 
     <div class="container1">
         <div class="row">
-           
-                <div class="col-lg-4 mb-4">
-                    <!-- <input class="bar" style="font-family: FontAwesome;" placeholder='&#xf002 Search...' /> -->
-                    <!-- <input class="bar" type="search"><button style="font-size:26px" i class="fa fa-search"></i></button> -->
+           <div class="col-lg-4 mb-4">
                     <div class="todos">
                       <form id="todo-form" method="POST">
-                        <!-- <label for="todo-text">Add a Todo:</label> -->
+                        <label for="todo-text">Add a Todo:</label>
                         <input type="text" name="todo-text" id="todo-text" />
                       </form>
                       <p><span id="todo-count"></span></p>
                       <ul id="todo-list" style="list-style-type:none"></ul>
-                    </div>
-                    
-                
+                    </div>   
             </div>
            <div class="col-lg-8"> 
-               <h3>Name of city from "Search box - list</h3>
-               <div class="weather-container">
-                 <p>Click for todays forecast</p>
-                   <img class="icon"</p>
-                   <p class="weather"</p>
-                   <p class="temp"</p>
-               </div>
-               <div class="fiveday">
-               <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <p class="weather"</p>
-                      <p class="temp"</p>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
+               <h3>Current City Weather</h3>
+               
+               <div class="card">
+                <!-- <h2>Last Registered User:</h2> -->
+                <p><strong>Name of City:</strong><span type="text"></span></p>
+                <img src="https://thumbs.dreamstime.com/z/sun-2972259.jpg" alt="sun image" width=>
+                <p>Temperature:</p>
+                <p>Humidity:</p>
+                <p>UV Index:</p>
+                <p>Chance of Rain:</p>
                 </div>
-              
-                <div class="column">
-                  <div class="card">
-                    <h3>Card 2</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
+  <div class=container5>
+          <div class="col-lg-6">
+                <div class="row">
+                    <div class="card2">
+                      <p id="datetime"></p>   
+                        <div id="description"></div>
+                        <h1 id="temp"></h1>
+                        <div id="location"></div>
                 </div>
-                
-                <div class="column">
-                  <div class="card">
-                    <h3>Card 3</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
+<div class="row">
+                    <div class="card2">
+                      <p id="datetime"></p>   
+                        <div id="description"></div>
+                        <h1 id="temp"></h1>
+                        <div id="location"></div>
                 </div>
-                
-                <div class="column">
-                  <div class="card">
-                    <h3>Card 4</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
 
-        <!-- <div class="col-lg-6"> 
-           <h3>This area is for temp info and at the bottom cards</h3>
-        </div> -->
-       </div>
-       </div> 
+
+
+
+          </div>
+
+  </div>        
+       <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        </script>
+
        <script src="script.js"></script>
-</body>
+  </body>
 </html>
