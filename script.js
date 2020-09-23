@@ -69,7 +69,7 @@ var icon ="http://openweathermap.org/img/wn/10d@2x.png";
 // $(".temp").append(temp);
 // $(".weather").append(weather);
 
-var dt = newDate();
+var date = newDate();
   document.getElementById("datetime").innerHtml = dt.toLocaleString();
 
 });
@@ -79,7 +79,7 @@ const key = '';
 if(key=='') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
 
 function weatherBallon( cityID ) {
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + '411910c4c4abb733221242b4d25a13f1')  
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + '411910c4c4abb733221242b4d25a13f1')  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
 		drawWeather(data);
