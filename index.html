@@ -14,9 +14,9 @@
         <h1>Pauls Extended Forecast Generator</h1>
     </div>
 
-    <div class="container1">
+    <div class="container-fluid page">
         <div class="row">
-           <div class="col-lg-4 mb-4">
+          <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:yellow;">
                     <div class="todos">
                       <form id="todo-form" method="POST">
                         <label for="todo-text">Add a Todo:</label>
@@ -26,11 +26,12 @@
                       <ul id="todo-list" style="list-style-type:none"></ul>
                     </div>   
             </div>
-           <div class="col-lg-8"> 
+        </div>    
+
+        
+        <div class="col-sm-9 col-md-6 col-lg-8" style="background-color:pink;">
                <h3>Current City Weather</h3>
-               
-               <div class="card">
-                
+              <div class="card-city"> 
                 <p><strong>Name of City:</strong><span type="text"></span></p>
                 <img src="https://thumbs.dreamstime.com/z/sun-2972259.jpg" alt="sun image" width=>
                 <p>Temperature:</p>
@@ -38,47 +39,14 @@
                 <p>UV Index:</p>
                 <p>Chance of Rain:</p>
                 </div>
- 
-         <div class="col-lg-8"> 
-                <div class="row">
-                  <div class="column">
-                    <div class="card1">
-                      <p id="datetime"></p>   
-                        <div id="description"></div>
-                        <h1 id="temp"></h1>
-                        <div id="location"></div>
-                    </div>
-                 </div>   
-                 <div class="column">
-                  <div class="card1">
-                    <p id="datetime1"></p>   
-                      <div id="description2"></div>
-                      <h1 id="temp2"></h1>
-                      <div id="location2"></div>
-                  </div>
-               </div>   
-                 
+     </div>
+    
 
-                <div class="column">
-                  <div class="card1">
-                    <p id="datetime2"></p>   
-                      <div id="description3"></div>
-                      <h1 id="temp3"></h1>
-                      <div id="location3"></div>
-                  </div>
-               </div>   
-               
-              <div class="column">
-                <div class="card1">
-                  <p id="datetime3"></p>   
-                    <div id="description4"></div>
-                    <h1 id="temp4"></h1>
-                    <div id="location4"></div>
-                </div>
-            
-            </div>
-          </div>
-       
+         
+
+
+
+
         <script>
         var date = new Date();
         document.getElementById("datetime").innerHTML = date.toLocaleString();
