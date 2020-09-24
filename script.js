@@ -62,10 +62,10 @@ var dt = newDate();
 
 
 const key = '';
-if(key =='') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
+if(key == '') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
 
 function weatherBallon( cityID ) {
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + '411910c4c4abb733221242b4d25a13f1')  
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + 5128581 + '&appid=' + '411910c4c4abb733221242b4d25a13f1')  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
 		drawWeather(data);
@@ -113,3 +113,4 @@ function drawWeather( d ) {
 window.onload = function() {
 	weatherBallon( 6167865 );
 }
+
