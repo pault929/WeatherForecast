@@ -41,42 +41,28 @@ todoForm.addEventListener("submit", function(event) {
   renderTodos();
 });
 
+
+
 // var todo = "Orlando";
 
-$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=orlando&units=imperial&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial", function(data){
+$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=5128581&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial", function(data){
 
 console.log(data);
 
-var icon ="http://openweathermap.org/img/wn/10d@2x.png";
+// var icon ="http://openweathermap.org/img/wn/10d@2x.png";
+var icon ="http://api.openweathermap.org/data/2.5/forecast?q=5128581&APPID=411910c4c4abb733221242b4d25a13f1&units=imperial";
 
 
-// var temperature = Math.floor(data.main.temperature);
-// var weather = data.weather[0].main;
-
-// $(".icon").attr("src", icon);
-// $(".weather").append(weather);
-// $(".temp").append(temperature);
 
 
-// 
-
-// var temp = data.main.temp;
-// var weather = data.weather[0].main;
-
-// console.log(icon);
-
-// $('.icon').atrr('src', icon);
-// $(".temp").append(temp);
-// $(".weather").append(weather);
-
-var date = newDate();
-  document.getElementById("datetime").innerHtml = dt.toLocaleString();
+var dt = newDate();
+  document.getElementById("datetime").innerHtml = date.toLocaleString();
 
 });
 
 
 const key = '';
-if(key=='') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
+if(key =='') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
 
 function weatherBallon( cityID ) {
 	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + '411910c4c4abb733221242b4d25a13f1')  

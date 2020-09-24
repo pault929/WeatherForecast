@@ -1,68 +1,102 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Paul's Local Forecast</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <div class="header">
-        <h1>Pauls Extended Forecast Generator</h1>
+        <h1>Paul's Extended Forecast Generator</h1>
     </div>
 
-    <div class="container-fluid page">
-        <div class="row">
-          <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:yellow;">
-                    <div class="todos">
-                      <form id="todo-form" method="POST">
-                        <label for="todo-text">Add a Todo:</label>
-                        <input type="text" name="todo-text" id="todo-text" />
-                      </form>
-                      <p><span id="todo-count"></span></p>
-                      <ul id="todo-list" style="list-style-type:none"></ul>
-                    </div>   
-            </div>
-        </div>    
 
-        
-        <div class="col-sm-9 col-md-6 col-lg-8" style="background-color:pink;">
-               <h3>Current City Weather</h3>
-              <div class="card-city"> 
-                <p><strong>Name of City:</strong><span type="text"></span></p>
-                <img src="https://thumbs.dreamstime.com/z/sun-2972259.jpg" alt="sun image" width=>
-                <p>Temperature:</p>
-                <p>Humidity:</p>
-                <p>UV Index:</p>
-                <p>Chance of Rain:</p>
-                </div>
-     </div>
+
+
+<div class="main-container">
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4" id="left">
+        <form id="todo-form" method="POST">
+            <label for="todo-text">Enter a City :</label>
+            <input type="text" name="todo-text" id="todo-text"/>
+          </form>
+          <p><span id="todo-count"></span></p>
+          <ul id="todo-list" style="list-style-type:none"></ul>
+    </div>
     
+    <div class="col-sm-9 col-md-6 col-lg-7" id="right">
+        <p><strong>Name of City:</strong><span type="text"></span></p>
+        <img src="https://thumbs.dreamstime.com/z/sun-2972259.jpg" alt="sun image" width=>
+        <p>Temperature:</p>
+        <p>Humidity:</p>
+        <p>UV Index:</p>
+        <p>Chance of Rain:</p>    </div>
+  </div>
+</div>
+</div>
+<div class="cards">
+<div class="row2">
+        <div class="column">
+          <div class="card1">
+            <p id="datetime"></p>   
+              <div id="description"></div>
+              <h1 id="temp"></h1>
+              <div id="location"></div>
+          </div>
+       </div>   
+       <div class="column">
+        <div class="card1">
+          <p id="datetime1"></p>   
+            <div id="description2"></div>
+            <h1 id="temp2"></h1>
+            <div id="location2"></div>
+        </div>
+     </div>   
+       
 
-         
+      <div class="column">
+        <div class="card1">
+          <p id="datetime2"></p>   
+            <div id="description3"></div>
+            <h1 id="temp3"></h1>
+            <div id="location3"></div>
+        </div>
+     </div>   
+     
+    <div class="column">
+      <div class="card1">
+        <p id="datetime3"></p>   
+          <div id="description4"></div>
+          <h1 id="temp4"></h1>
+          <div id="location4"></div>
+      </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
 
-
-
-
-        <script>
-        var date = new Date();
-        document.getElementById("datetime").innerHTML = date.toLocaleString();
-        
-        var date = new Date();
-        document.getElementById("datetime1").innerHTML = date.toLocaleString();
-        
-        var date = new Date();
-        document.getElementById("datetime2").innerHTML = date.toLocaleString();
-        
-        
-        var date = new Date();
-        document.getElementById("datetime3").innerHTML = date.toLocaleString();
-        
-        </script>
-
-       <script src="script.js"></script>
-  </body>
+  <script>
+    var date = new Date();
+    document.getElementById("datetime").innerHTML = date.toLocaleString();
+    
+    var date = new Date();
+    document.getElementById("datetime1").innerHTML = date.toLocaleString();
+    
+    var date = new Date();
+    document.getElementById("datetime2").innerHTML = date.toLocaleString();
+    
+    
+    var date = new Date();
+    document.getElementById("datetime3").innerHTML = date.toLocaleString();
+    
+    </script>
+<script src="script.js"></script> 
+</body>
 </html>
