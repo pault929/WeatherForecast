@@ -8,6 +8,8 @@ class Fetch {
         `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=imperial&appid=${myKey}`
       );
   
+      
+
       const data = await response.json();
   
       console.log(data);
