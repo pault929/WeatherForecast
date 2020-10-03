@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Weather Forecast</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -16,27 +16,39 @@
     </div>
 
 
+    <div class="main-container">
+      <div class="container-fluid">
+          <div class="row">
+          <div class="col-lg-6">
+              <form id="todo-form" method="POST">
+                  <label for="todo-text">Enter a City :</label>
+                  <input type="text" name="todo-text" id="todo-text"/>
+                </form><br>
+                <p><span id="todo-count"></span>
+                <ul id="todo-list" style="list-style-type:none"></ul>
+          </div>
+          
+          
+    <div class="col-lg-6">
+    <div class="container searchContainer">
+      <div class="search card card-body">
+          
+          <p class="lead">Enter a City for the Weather</p> 
+          <input type="text" id="searchUser" class="form-control" placeholder="Location">
+      </div>
+      <br>
+      <div id="profile"></div>
+  </div>
+  <div class="container text-center mt-2">
+      <button class="btn btn-primary" id="submit">Submit</button>
+  </div>
 
 
-<div class="main-container">
-<div class="container-fluid">
-    <div class="row">
-    <div class="col-sm-3 col-md-6 col-lg-4" id="left">
-        <form id="todo-form" method="POST">
-            <label for="todo-text">Enter a City :</label>
-            <input type="text" name="todo-text" id="todo-text"/>
-          </form>
-          <p><span id="todo-count"></span></p>
-          <ul id="todo-list" style="list-style-type:none"></ul>
-    </div>
+
+
+  <div id="content">
+
     
-    <div class="col-sm-9 col-md-6 col-lg-7" id="right">
-        <p><strong>Name of City:</strong><span type="text"></span></p>
-        <img src="https://thumbs.dreamstime.com/z/sun-2972259.jpg" alt="sun image" width=>
-        <p>Temperature:</p>
-        <p>Humidity:</p>
-        <p>UV Index:</p>
-        <p>Chance of Rain:</p>    </div>
   </div>
 </div>
 </div>
@@ -98,5 +110,10 @@
     
     </script>
 <script src="script.js"></script> 
+
+<script src="fetch.js"></script>
+  <script src="class.js"></script>
+  <script src="app.js"></script>
+
 </body>
 </html>

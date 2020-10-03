@@ -59,7 +59,9 @@ var dt = newDate();
   document.getElementById("datetime").innerHtml = date.toLocaleString();
 
 });
-
+// const response = await fetch(
+//   `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=imperial&appid=${myKey}`
+// );
 
 const key = '';
 if(key == '') document.getElementById('temp').innerHTML = ('411910c4c4abb733221242b4d25a13f1');
@@ -75,27 +77,27 @@ function weatherBallon( cityID ) {
 	});
 }
 function drawWeather( d ) {
-  var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+  // var celcius = Math.round(parseFloat(d.main.temp)-273.15);
 	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
   var description = d.weather[0].description; 
 	
 	document.getElementById('description').innerHTML = description;
-	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
 	document.getElementById('location').innerHTML = d.name;
   
   
   document.getElementById('description2').innerHTML = description;
-	document.getElementById('temp2').innerHTML = celcius + '&deg;';
+	document.getElementById('temp2').innerHTML = fahrenheit + '&deg;';
 	document.getElementById('location2').innerHTML = d.name;
   
   
   document.getElementById('description3').innerHTML = description;
-	document.getElementById('temp3').innerHTML = celcius + '&deg;';
+	document.getElementById('temp3').innerHTML = fahrenheit+ '&deg;';
 	document.getElementById('location3').innerHTML = d.name;
   
   
   document.getElementById('description4').innerHTML = description;
-	document.getElementById('temp4').innerHTML = celcius + '&deg;';
+	document.getElementById('temp4').innerHTML = fahrenheit + '&deg;';
 	document.getElementById('location4').innerHTML = d.name;
   
   

@@ -1,13 +1,39 @@
-#right{
-  background-color:red;
+#content{
+  background-color:white;
   opacity: .8;
-  padding-top: 10px;
-  margin-top: 35px;
-  border-radius: 30px;
-  color: whites;
+  padding-top: content-max;
+  margin-top: content-max;
+  border-radius: none;
+  color: black;
+  float: right;
+  width: 100%;
+  text-align: left;
+  padding-left:25px;
+  margin-right:10px;
+  margin-top:20px;
+  border-radius: 10px; 
+  border: solid black;
   
 }
 
+h5{
+  font-size:3em;
+}
+h6{
+  font-size:1.5em;
+}
+
+.card-text{
+  font-size:1.5em;
+  background-color:yellow;
+  width: max-content;
+   max-height: max-content; 
+   
+}
+.container{
+  width:100%;
+  margin-right: 75px;
+}
 body{
   background-image: url("https://cdn.pixabay.com/photo/2017/02/18/09/04/sky-2076868_1280.jpg");
   background-repeat: no-repeat;
@@ -31,7 +57,7 @@ body{
 
 input {
   height: 50px;
-  width: 100%;
+  width: 50%;
   padding: 6px;
   margin-top: 10px;
   font-size: 2.4em;
@@ -39,12 +65,13 @@ input {
   border-radius:20px;
 }
 
-
+/* actual list once entered */
 ul {
   list-style-type: none;
   padding: 0;
   background-color: white;
-  width: 100%;
+  width: 75%;
+  margin-left:50px;
 }
 
 li {
@@ -53,11 +80,12 @@ li {
   margin-bottom: 5px;
   padding: 5px;
   background-color: yellow;
-  color: white;
+  color: black;
   font-size: 1.5em;
   line-height: 1.5;
   width: 100%;
   text-align: center;
+  padding-left:25px;
 
 }
 
@@ -147,3 +175,24 @@ img{
 
 }
 
+#searchUser{
+  background-color:white;
+  height: 75px;
+  font-size:2em;
+}
+.lead{
+  color: red;
+  font-size:2.5em;
+}
+.btn{
+  background-color:red;
+  height: 50px;
+  width: 150px;
+  
+}
+.btn:hover { 
+  background-color:yellow;
+  color:black;
+
+
+}
