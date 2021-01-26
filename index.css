@@ -35,7 +35,7 @@ h4{
   font-weight:bold;
 }
 h6{
-  font-size:1em;
+  font-size:1.5em;
 } 
 
 /*placeholder*/
@@ -63,17 +63,19 @@ h6{
   text-align:center;
 }
 
-.card-body:hover{
+/* .card-body:hover{
   background-color:whitesmoke;
   
-}
+} */
 
 #forecast{
   background-color: none;
   text-align: center;
   margin-left:125px; 
 }
-
+/* #forecast:hover{
+background-color:whitesmoke;
+} */
 
 
 img{
