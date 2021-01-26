@@ -95,7 +95,7 @@ $(document).ready(function() {
                 .then(function (data) {
                     // create title and empty row
                 
-                    $("#forecast").html("<h4>5-Day Forecast:</h4>").append("<div class=\"row\">")
+                    $("#forecast").html("<h4>Weekly outlook:</h4>").append("<div class=\"row\">")
     
                     // loop over all forecasts by 3-hour increments
                     for (var i = 0; i < data.list.length - 1; i++) {

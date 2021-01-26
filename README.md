@@ -1,10 +1,12 @@
-# Title:
-# Link to site:
-# List of Technologies
-# What does APP/Program do
-# Screen Shoots 
-# License
-# Collaborators
+# Title:WeatherForecast
+# Link to site: https://pault929.github.io/WeatherForecast/
+# List of Technologies: Javascript, CSS, HTML
+# What does APP/Program do: gets Weather from input and shows current and 5 day forecast.
+# License: N/A
+# Collaborators: Paul Toro
+# Screenshots: 
+<img src="images/weatherlocal.jpg" alt="Local WeatherForecast">
+<img src="images/weather2.jpg" alt="5 day forecast">
 
 
 # WeatherForecast
