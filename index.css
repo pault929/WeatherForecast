@@ -1,166 +1,89 @@
-html, body, {
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-}
-
-
-
-#content{
-  background-color:white;
-  opacity: .8;
-  padding-top: content-max;
-  margin-top: content-max;
-  border-radius: none;
-  color: black;
-  float: right;
-  width: 100%;
-  text-align: left;
-  padding-left:25px;
-  margin-right:10px;
-  margin-top:20px;
-  border-radius: 10px; 
-  border: solid black;
-  
-}
-
-h5{
-  font-size:2em;
-}
-h6{
-  font-size:1.5em;
-}
-
-.card-text{
-  font-size:1.5em;
-  background-color:yellow;
-  width: max-content;
-  max-height: max-content; 
-  border-radius: 50px;
-   
-}
-.container{
-  width:100%;
-  margin-right: 75px;
-  
-}
 body{
   background-image: url("https://cdn.pixabay.com/photo/2017/02/18/09/04/sky-2076868_1280.jpg");
   background-repeat: no-repeat;
   background-size:cover;
+  font-family: 'Handlee', cursive;
 }
 
-.header{
-  border-style: none;
-  border-color: none;
+.listbtn {
+  background-color: Red;
+  color: #ffffff;
+  height: 50px;
+  width: 100px;
+
+}
+
+.row{
+ /* margin-left:125px; */
+ /* margin-right:auto; */
   text-align: center;
-  padding:20px;
-  margin: 10PX;
-  border-radius: 25px;
-  background-color:#00a2ff;
-  opacity:0.7;
-  color: black;
-  box-shadow: 5px 10px red;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-input {
+p{
+  font-size:2em;
+  color: black;
+}
+h1{
+  text-align:center;
+}
+
+h5{ 
+  font-size:2em;
+}
+h6{
+  font-size:1em;
+} 
+
+/*placeholder*/
+#city {
   height: 50px;
   width: 50%;
-  padding: 6px;
   margin-top: 10px;
   font-size: 2.4em;
+  background-color: red;
+  margin-left: 15px;
   
 }
 
 /* actual list once entered */
-ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: white;
-  width: 50%;
-  margin-left:50px;
-  
-}
-
-li {
-  height: 50px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: white;
-  color: black;
-  font-size: 1.5em;
-  line-height: 1.5;
-  width: 100%;
-  text-align: left;
-  padding-left:25px;
-  border: solid black;
-  
-  
-
-}
-
-li:before {
-  content: "\200B";
-  position: absolute;
-  /* border-radius:25px; */
-}
-
-li::after {
-  content: " ";
-  display: block;
-  clear: both;
+#listcity {
   width: 25%;
-  padding: 25PX;
-  /* border-radius:25px; */
+  margin-left: 15px;
+  
 }
 
-li button {
-  float: right; 
+.card-body{
+  background-color: none;
   border: none;
-  height: 40px;
-  cursor: pointer;
-  background-color: #e08c15;
-  color: white;
-  font-size: 1em;
-  margin-bottom: 25%;
+  color:black;
+  text-align:center;
+}
+
+.card-body:hover{
+  background-color:whitesmoke;
   
 }
 
-.placeholder{
-  width: 100%;
-  
+#forecast{
+  background-color: none;
+  text-align: center;
+  margin-left:125px; 
 }
+
+
 
 img{
   width: 50px;
   height: 50px;
 }
 
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+.cards{
+  margin-top:50px;
+  width: auto;
+  margin: 50px;
 }
 
-/* Remove extra left and right margins, due to padding */
-.row2 {margin: 0 -5px;}
 
-/* Clear floats after the columns */
-.row2:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -169,48 +92,15 @@ img{
   }
 }
 
-/* Style the counter cards */
-.card1{
-  /* box-shadow: 5px 10px red; */
-  padding: 16px;
-  text-align: center;
-  /* background-color:#00a2ff; */
-  /* border-radius:20px; */
-  opacity: 0.7;
-  font-style: italic;
-  font-weight: 800;
-  color: black;
-
-}
-
-.cards{
-  margin-top:50px;
-  /* border-style: solid;
-  border-color: red; */
-  width: auto;
-  margin: 50px;
-  
-
-}
-
-#searchUser{
-  background-color:white;
-  height: 50px;
-  font-size:2em;
-}
-.lead{
-  color: red;
-  font-size:1.5em;
-}
-.btn{
-  background-color:red;
-  height: 50px;
-  width: 100px;
-  
-}
-.btn:hover { 
-  background-color:yellow;
-  color:black;
 
 
-}
+/*couldnt get it to work*/
+/* #footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red !important;
+  color: white;
+  text-align: center !important;
+} */

@@ -1,21 +1,17 @@
 $(document).ready(function() {
-    //Api Key
-    var apiKey = "188366c4a74fbb8bc6a6f7d868a6bfa2";
+    var apiKey = "411910c4c4abb733221242b4d25a13f1";
+
     var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
         // create click event for city search 
         $("#submitCity").on("click", function () {
         var searchValue = $("#city").val();
-       // console.log(searchValue);
         getWeather(searchValue);
-    
         });
     
         $(".history").on("li", function () {
             return createRow();
-    
         });
-
 
         //history btn weather
         $(".history").on("click", ".historyBtn", function () {
@@ -35,13 +31,11 @@ $(document).ready(function() {
             $(".history").append(li);
     
         }
-// }
+
 
         function getWeather(searchValue) {
     
             // create a var and assign the value received back from API
-        
-            
             // make a request to API openweahtermap
             
             $.ajax({
@@ -49,7 +43,7 @@ $(document).ready(function() {
                 method: "GET",
                 
             })
-                // show weather
+                // show weatherforecast
                 .then(function (data) {
                 
     
@@ -64,11 +58,11 @@ $(document).ready(function() {
                     // clear any old content
                     $("#today").empty();
     
-                    // create html content for today weather
+                    // todays weather html card
     
                     var card = $("<div>").addClass("card");
                     var body = $("<div>").addClass("card-body");
-                    var title = $("<h3>").addClass("card-title").text(data.name + "(" + new Date().toLocaleDateString() + ")");
+                    var title = $("<h3>").addClass("card-title").text (data.name + "  (" + new Date().toLocaleDateString() + ")");
                     var image = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png");
                     var temp = $("<p>").addClass("card-text").text("Temperature: " + data.main.temp + "F");
                     var humidity = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
@@ -80,9 +74,9 @@ $(document).ready(function() {
                     body.append(title, temp, humidity, wind);
                     $("#today").append(card);
                 
-                    // move to the next fuction 
+                    // move next fuction 
                     getForecast(searchValue);
-                    // getUVIndex(data.coord.lat, data.coord.lon);
+                    getUVIndex(data.coord.lat, data.coord.lon);
     
                 });
     
@@ -110,8 +104,8 @@ $(document).ready(function() {
                             
                             // create HTML for forecast row
     
-                            var col = $("<div>").addClass("col-sm-2");
-                            var card = $("<div>").addClass("card bg-primary text-white");
+                            var col = $("<div>").addClass("col-lg-2");
+                            var card = $("<div>").addClass("card bg-none text-white");
                             var body = $("<div>").addClass("card-body p-2");
                             var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
                             var image = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png");
@@ -125,56 +119,47 @@ $(document).ready(function() {
                             card.append(body);
                             body.append(title, image, temp, humidity);
                             $("#forecast .row").append(col);
-    
+                            }
                         }
+                     });
+                }
     
-                    }
+        function getUVIndex(lat, lon) {
+
+            $.ajax({
+                url: 'https://api.openweathermap.org/data/2.5/uvi?' + "&appid=" + apiKey + 
+                '&lat=' + lat + '&lon=' + lon,
+                method: "GET",
+            
+            })
     
+             //show the weather--this was difficult...
+            .then(function (data) {
+                var uvIndex = $("<p>").text("UV Index: ");
+                var btn = $("<span>").addClass("btn btn-sm").text(data.value);
     
+                if(data.value <= 2) {
+                    btn.addClass("btn-success");
+                } 
     
-                });
+                else if (data.value <= 5) {
+                btn.addClass("btn-warning");
+    
+            } 
+                else {
+                btn.addClass("btn-danger");
+            }
+            $("#today .card-body").append(uvIndex.append(btn));
+    
+        });
     
         }
     
-        // function getUVIndex(lat, lon) {
-
-        //     $.ajax({
-        //         url: 'https://api.openweathermap.org/data/2.5/uvi?' + "&appid=" + apiKey + 
-        //         '&lat=' + lat + '&lon=' + lon,
-        //         method: "GET",
-            
-        //     })
-    
-        //      //show the weather
-        //     .then(function (data) {
-        //     // console.log(data)
-        //         var uvIndex = $("<p>").text("UV Index: ");
-        //         var btn = $("<span>").addClass("btn btn-sm").text(data.value);
-    
-        //         if(data.value <= 2) {
-        //             btn.addClass("btn-success");
-        //         } 
-    
-        //         else if (data.value <= 5) {
-        //         btn.addClass("btn-warning");
-    
-        //     } 
-            
-        //         else {
-        //         btn.addClass("btn-danger");
-        //     }
-    
-        //     $("#today .card-body").append(uvIndex.append(btn));
-    
-        // });
-    
-        // }
     
     
     
-    // get any history
     var history = JSON.parse(window.localStorage.getItem("history")) || [];
-    // console.log(history)
+   
     if (history.length > 0) {
     getWeather(history[0]);
     }
