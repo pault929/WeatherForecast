@@ -7,16 +7,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <div class="header">
-        <h3>Paul's Extended Forecast Generator</h3>
+      <h1>Paul's Extended Forecast <i class="fas fa-cloud-sun"></i></h1>
     </div>
 
 
-    <div class="main-container">
+    <!-- <div class="main-container">
       <div class="container-fluid">
           <div class="row">
           <div class="col-lg-6">
@@ -46,14 +49,14 @@
     
 </div>
 </div>
-</div>
+</div> -->
 
 
- <div class="cards">
+ <!-- <div class="cards">
 <div class="row2">
         <div class="column">
           <div class="card1">
-            <!-- <p id="datetime"></p>    -->
+            <p id="datetime"></p>   
               <div id="description"></div>
               <h1 id="temp"></h1>
               <div id="location"></div>
@@ -61,7 +64,7 @@
        </div>   
        <div class="column">
         <div class="card1">
-          <!-- <p id="datetime1"></p>    -->
+          <p id="datetime1"></p>   
             <div id="description2"></div>
             <h1 id="temp2"></h1>
             <div id="location2"></div>
@@ -71,7 +74,7 @@
 
       <div class="column">
         <div class="card1">
-          <!-- <p id="datetime2"></p>    -->
+          <p id="datetime2"></p>   
             <div id="description3"></div>
             <h1 id="temp3"></h1>
             <div id="location3"></div>
@@ -80,7 +83,7 @@
      
     <div class="column">
       <div class="card1">
-        <!-- <p id="datetime3"></p>    -->
+        <p id="datetime3"></p>   
           <div id="description4"></div>
           <h1 id="temp4"></h1>
           <div id="location4"></div>
@@ -89,7 +92,7 @@
       </div>
     </div>
   </div>
-  </div> 
+  </div>  -->
 
   <!-- <script>
     var date = new Date();
@@ -106,11 +109,69 @@
     document.getElementById("datetime3").innerHTML = date.toLocaleString();
     
     </script> -->
-<script src="script.js"></script> 
+
+
+
+
+<!-- Search Container present/past btns -->
+<div class="container-fluid">
+  <div class="row">
+      <aside class="col-lg-3 bg-light">
+          <h5 class="mt-1">Search for a city:</h5>
+          <div class="form-inline form-group">
+              <input type="text" id="city" placeholder="City">
+              <button id="submitCity" class ="listbtn"><i class = "fas fa-search-location">Search</i>
+              <i class="icon-bar"></span>
+              </button>
+
+              <div id="error"></div>
+
+          </div>
+
+          <ul class="list-group history"></ul>
+          
+      </aside>
+      <!-- <div class="col-lg-9"> -->
+
+
+          <!-- create container for current weather -->
+          <div class = "container">
+          <div class="md-3 col-lg-10 pt-3 content" id=today></div>
+          </div>
+
+          <!-- create container for forecast -->
+          <div class = "container">
+          <div class="five-day-div bg-light p-3 m-3 w-100" id=forecast>
+          <div class = "card">
+
+      </div>
+          </div>
+          </div>
+
+
+
+              <!--jQuery JS -->
+              <script src="https://code.jquery.com/jquery.js"></script>
+              <script src="https://kit.fontawesome.com/2e0dc01201.js" crossorigin="anonymous"></script>
+              <script
+                  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+              <!-- Code to the JavaScript File -->
+              <script src="index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <script src="script.js"></script> 
 
 <script src="fetch.js"></script>
   <script src="class.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js"></script> -->
 
-</body>
-</html>
+
+
+
+ 
